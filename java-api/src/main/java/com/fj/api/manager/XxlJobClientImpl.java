@@ -1,12 +1,12 @@
-package com.xxljob.javaapi.manager;
+package com.fj.api.manager;
 
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.xxljob.javaapi.config.XxlJobProperties;
-import com.xxljob.javaapi.model.ReturnT;
-import com.xxljob.javaapi.model.XxlJobInfo;
-import com.xxljob.javaapi.okhttp.HttpClient;
+import com.fj.api.config.XxlJobProperties;
+import com.fj.api.model.ReturnT;
+import com.fj.api.model.XxlJobInfo;
+import com.fj.api.okhttp.HttpClient;
 import lombok.SneakyThrows;
 import lombok.val;
 import okhttp3.*;

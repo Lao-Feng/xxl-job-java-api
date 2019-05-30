@@ -1,16 +1,14 @@
-package com.xxljob.javaapi.manager;
+package com.fj.api.manager;
 
 import cn.hutool.core.util.StrUtil;
-import com.xxljob.javaapi.config.XxlJobProperties;
-import com.xxljob.javaapi.model.ReturnT;
-import com.xxljob.javaapi.model.XxlJobInfo;
-import com.xxljob.javaapi.okhttp.HttpClient;
+import com.fj.api.config.XxlJobProperties;
+import com.fj.api.model.ReturnT;
+import com.fj.api.model.XxlJobInfo;
+import com.fj.api.okhttp.HttpClient;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import okhttp3.HttpUrl;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 
 import java.util.Map;
 import java.util.Objects;

@@ -1,8 +1,8 @@
-package com.xxljob.javaapi.manager;
+package com.fj.api.manager;
 
 
-import com.xxljob.javaapi.model.ReturnT;
-import com.xxljob.javaapi.model.XxlJobInfo;
+import com.fj.api.model.ReturnT;
+import com.fj.api.model.XxlJobInfo;
 
 import java.util.Map;
 

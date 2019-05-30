@@ -1,4 +1,4 @@
-package com.xxljob.javaapi.jobhandler;
+package com.fj.api.jobhandler;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;

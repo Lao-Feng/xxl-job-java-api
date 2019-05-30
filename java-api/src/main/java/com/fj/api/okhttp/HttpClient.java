@@ -1,4 +1,4 @@
-package com.xxljob.javaapi.okhttp;
+package com.fj.api.okhttp;
 
 import cn.hutool.core.util.StrUtil;
 import lombok.SneakyThrows;

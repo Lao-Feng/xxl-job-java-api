@@ -1,10 +1,10 @@
-package com.xxl.job.executor.test;
+package com.fj.api.test;
 
 import com.alibaba.fastjson.JSON;
-import com.xxljob.javaapi.JobApplication;
-import com.xxljob.javaapi.manager.XxlJobClientImpl;
-import com.xxljob.javaapi.model.ReturnT;
-import com.xxljob.javaapi.model.XxlJobInfo;
+import com.fj.api.ApiApplication;
+import com.fj.api.manager.XxlJobClientImpl;
+import com.fj.api.model.ReturnT;
+import com.fj.api.model.XxlJobInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Slf4j
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JobApplication.class)
+@SpringBootTest(classes = ApiApplication.class)
 public class ApiTest {
     @Autowired
     XxlJobClientImpl client;

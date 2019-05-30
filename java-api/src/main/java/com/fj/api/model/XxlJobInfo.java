@@ -1,4 +1,4 @@
-package com.xxljob.javaapi.model;
+package com.fj.api.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
