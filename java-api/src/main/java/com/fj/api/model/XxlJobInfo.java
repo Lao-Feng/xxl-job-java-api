@@ -1,6 +1,9 @@
 package com.fj.api.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -10,6 +13,9 @@ import java.util.Date;
  * @author xuxueli  2016-1-12 18:25:49
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class XxlJobInfo {
 
     private int id;                // 主键ID	    (JobKey.name)

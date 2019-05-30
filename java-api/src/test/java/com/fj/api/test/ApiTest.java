@@ -3,7 +3,6 @@ package com.fj.api.test;
 import com.alibaba.fastjson.JSON;
 import com.fj.api.ApiApplication;
 import com.fj.api.manager.XxlJobClientImpl;
-import com.fj.api.model.ReturnT;
 import com.fj.api.model.XxlJobInfo;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -29,7 +28,6 @@ public class ApiTest {
     @Autowired
     XxlJobClientImpl client;
 
-
     @Test
     public void pageList() {
         val result = client.pageList(0, 100, 1,
@@ -39,7 +37,7 @@ public class ApiTest {
 
     @Test
     public void add() {
-        //在这里不用传递时间
+        //在这里不用传递时间、id等
         String job = "{\"alarmEmail\":\"\"," +
                 //"\"glueUpdatetime\":1541254891000," +
                 "\"executorParam\":\"\",\"jobStatus\":\"NONE\"," +
@@ -51,9 +49,10 @@ public class ApiTest {
                 "\"jobDesc\":\"测试任务2\",\"glueSource\":\"\",\"glueType\":\"BEAN\"," +
                 "\"executorHandler\":\"demoJobHandler\",\"executorFailRetryCount\":0,\"id\":10," +
                 "\"executorTimeout\":0}";
-        XxlJobInfo jobInfo = JSON.parseObject(job, XxlJobInfo.class);
-        ReturnT<String> result = client.add(jobInfo);
-        System.out.println(result);
+
+        val jobInfo = JSON.parseObject(job, XxlJobInfo.class);
+        val result = client.add(jobInfo);
+        log.info(Objects.toString(result));
     }
 
     @Test
@@ -64,7 +63,6 @@ public class ApiTest {
 
     @Test
     public void stop() {
-        add();
         client.stop(8);
     }
 
