@@ -3,14 +3,14 @@
 ### 一、说明
 该项目基于[xl-job](https://github.com/xuxueli/xxl-job)扩展的JavaAPI。<br>
 在xxl-job中，没有提供javaAPI，只能在控制台人为操作定时任务，但是在实际在项目中需要通过代码控制调度任务，比如创建订单之后，两个小时不付款就关闭，
-因此 开源了一个 `xxl-job-java-api` ，可以在项目动态控制调度任务。
+因此 开源了一个 [xxl-job-java-api](https://github.com/Lao-Feng/xxl-job-java-api) ，可以在项目动态控制调度任务。
 
 ### 二、原理
 其实项目原理很简单，控制台通过页面发送http，该项目通过javaAPI生成对应http请求报文，从而通过代码控制调度任务
 
 ### 三、使用
-项目最主要使用的是 [XxlJobClientImpl](./src/main/java/com/fj/api/manager/XxlJobClientImpl.java)控制调度任务,当然也提供了测试代码,具体查看测试模块<br>
-
+* 项目最主要使用的是 [XxlJobClientImpl](./src/main/java/com/fj/api/manager/XxlJobClientImpl.java)控制调度任务,当然也提供了测试代码,具体查看测试模块<br>
+* 项目的说明，参考 [AbstractXxlJobClientTemplate](./src/main/java/com/fj/api/manager/AbstractXxlJobClientTemplate.java)的注释部分
 ### 四、目录说明
 * *config目录:* xxl-job配置文件
 * *manager目录:* 具体的API存放目录
