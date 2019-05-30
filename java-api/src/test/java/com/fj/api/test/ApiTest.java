@@ -6,16 +6,17 @@ import com.fj.api.manager.XxlJobClientImpl;
 import com.fj.api.model.ReturnT;
 import com.fj.api.model.XxlJobInfo;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Map;
+import java.util.Objects;
 
 /**
- * TODO
+ * 见证奇迹的时候到了
  *
  * @Author: FengJie
  * @Date: 2019/5/30 11:25
@@ -24,14 +25,16 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ApiApplication.class)
 public class ApiTest {
+
     @Autowired
     XxlJobClientImpl client;
 
+
     @Test
     public void pageList() {
-        Map<String, Object> x = client.pageList(0, 100, 1,
+        val result = client.pageList(0, 100, 1,
                 "", "", "");
-        System.out.println(x);
+        log.info(Objects.toString(result));
     }
 
     @Test

@@ -9,9 +9,10 @@ import org.springframework.context.annotation.Configuration;
 /**
  * xxl-job config
  * <p>
- * 项目启动注册,复制到业务代码中即可
+ * 项目启动注册,复制到业务代码中即可(在作者的代码中优化)
  *
  * @author xuxueli 2017-04-28
+ * @author FengJie
  */
 @Slf4j
 @Configuration

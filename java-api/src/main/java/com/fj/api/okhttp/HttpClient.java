@@ -32,6 +32,5 @@ public class HttpClient {
     @SneakyThrows
     public static Response call(Request request) {
         return CLIENT.newCall(request).execute();
-
     }
 }

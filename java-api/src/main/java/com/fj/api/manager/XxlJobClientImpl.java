@@ -18,7 +18,8 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
- * TODO
+ * XXL-JOB 对应的javaAPI,提供基本操作定时任务的功能
+ * 如果扩展
  *
  * @Author: FengJie
  * @Date: 2019/5/29 21:10
@@ -160,7 +161,7 @@ public class XxlJobClientImpl extends AbstractXxlJobClientTemplate {
     }
 
     /**
-     * 粗发执行器
+     * 触发执行器
      *
      * @param addr          addr
      * @param cookie        cookie
@@ -180,6 +181,9 @@ public class XxlJobClientImpl extends AbstractXxlJobClientTemplate {
         });
     }
 
+    /**
+     * 将对象的属性添加到请求参数中
+     */
     private void addParam(HttpUrl.Builder param, XxlJobInfo jobInfo) {
         //借助JSON工具,将所有的属性和对应的值,以参数的形式传递.
         Optional.of(jobInfo)
@@ -190,8 +194,11 @@ public class XxlJobClientImpl extends AbstractXxlJobClientTemplate {
                 .forEach((k, v) -> param.addQueryParameter(k, Objects.toString(v)));
     }
 
+    /**
+     * 发起http调用
+     */
     private String call(HttpUrl param, String cookie) {
-        RequestBody body = RequestBody.create(MediaType.parse("application/x-www-form-urlencoded"), StrUtil.EMPTY);
+        val body = RequestBody.create(MediaType.parse("application/x-www-form-urlencoded"), StrUtil.EMPTY);
         val req = new Request
                 .Builder()
                 .post(body)

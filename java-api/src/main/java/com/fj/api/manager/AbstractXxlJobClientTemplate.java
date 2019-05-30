@@ -178,7 +178,7 @@ public abstract class AbstractXxlJobClientTemplate implements IXxlJobClient {
     }
 
     /**
-     * 粗发执行器
+     * 触发执行器
      *
      * @param id            id
      * @param executorParam 参数
@@ -267,7 +267,7 @@ public abstract class AbstractXxlJobClientTemplate implements IXxlJobClient {
     abstract ReturnT<String> stop(String addr, String cookie, int id);
 
     /**
-     * 粗发执行器
+     * 触发执行器
      *
      * @param addr          addr
      * @param cookie        cookie

@@ -73,7 +73,7 @@ public interface IXxlJobClient {
     ReturnT<String> stop(int id);
 
     /**
-     * 粗发执行器
+     * 触发执行器
      *
      * @param id            id
      * @param executorParam 参数
