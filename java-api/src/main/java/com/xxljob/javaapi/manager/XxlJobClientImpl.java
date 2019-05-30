@@ -1,5 +1,6 @@
 package com.xxljob.javaapi.manager;
 
+import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.xxljob.javaapi.config.XxlJobProperties;
@@ -8,10 +9,7 @@ import com.xxljob.javaapi.model.XxlJobInfo;
 import com.xxljob.javaapi.okhttp.HttpClient;
 import lombok.SneakyThrows;
 import lombok.val;
-import okhttp3.HttpUrl;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
+import okhttp3.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -164,8 +162,8 @@ public class XxlJobClientImpl extends AbstractXxlJobClientTemplate {
     /**
      * 粗发执行器
      *
-     * @param addr addr
-     * @param cookie cookie
+     * @param addr          addr
+     * @param cookie        cookie
      * @param id            id
      * @param executorParam 参数
      * @return return
@@ -193,6 +191,7 @@ public class XxlJobClientImpl extends AbstractXxlJobClientTemplate {
     }
 
     private String call(HttpUrl param, String cookie) {
+        RequestBody body = RequestBody.create(MediaType.parse("application/x-www-form-urlencoded"), StrUtil.EMPTY);
         val req = new Request
                 .Builder()
                 .post(body)

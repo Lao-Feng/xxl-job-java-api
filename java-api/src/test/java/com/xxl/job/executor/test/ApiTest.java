@@ -29,7 +29,8 @@ public class ApiTest {
 
     @Test
     public void pageList() {
-        Map<String, Object> x = client.pageList(0, 100, 1, "", "", "");
+        Map<String, Object> x = client.pageList(0, 100, 1,
+                "", "", "");
         System.out.println(x);
     }
 

@@ -8,12 +8,15 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * xxl-job config
+ * <p>
+ * 项目启动注册,复制到业务代码中即可
  *
  * @author xuxueli 2017-04-28
  */
 @Slf4j
 @Configuration
-public class XxlJobConfig {
+public class XxlJobAutoRegisterConfig {
+
     @Autowired
     private XxlJobProperties properties;
 

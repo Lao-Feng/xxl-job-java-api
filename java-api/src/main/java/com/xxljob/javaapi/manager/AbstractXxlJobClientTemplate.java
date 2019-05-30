@@ -27,7 +27,7 @@ public abstract class AbstractXxlJobClientTemplate implements IXxlJobClient {
     /**
      * XXL_JOB 对应的各种操作路径path
      */
-    final String LOGIN_PATH = "/login";
+    private final String LOGIN_PATH = "/login";
     final String ADD_PATH = "/jobinfo/add";
     final String PAGE_LIST = "/jobinfo/pageList";
     final String UPDATE_PATH = "/jobinfo/update";
@@ -39,8 +39,7 @@ public abstract class AbstractXxlJobClientTemplate implements IXxlJobClient {
 
     private String[] addrs;
     private String cookie;
-    XxlJobProperties properties;
-    RequestBody body = RequestBody.create(MediaType.parse("application/x-www-form-urlencoded"), StrUtil.EMPTY);
+    private XxlJobProperties properties;
 
     public AbstractXxlJobClientTemplate(XxlJobProperties properties) {
         this.properties = properties;

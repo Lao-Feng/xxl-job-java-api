@@ -16,13 +16,51 @@
     </parent>
 
     <properties>
+        <okhttp.version>3.11.0</okhttp.version>
+        <fastjson.version>1.2.49</fastjson.version>
         <hutool-all.version>4.0.12</hutool-all.version>
         <xxl-job-core.version>2.0.2</xxl-job-core.version>
+        <org.projectlombok.version>1.18.4</org.projectlombok.version>
     </properties>
 
     <modules>
         <module>java-api</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- xxl-job-core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${org.projectlombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
