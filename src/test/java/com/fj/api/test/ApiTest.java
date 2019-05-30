@@ -70,5 +70,4 @@ public class ApiTest {
     public void triggerJob() {
         client.triggerJob(8, "手动促发参数");
     }
-
 }
